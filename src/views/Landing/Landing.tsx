@@ -11,7 +11,6 @@ const Landing: FC = () => {
     <Box display="flex" alignItems="center" justifyContent="center">
       <StandardImageList />
     </Box>
-
   </Box>
 };
 
