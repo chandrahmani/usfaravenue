@@ -5,59 +5,55 @@ import { Home, Settings } from "../views/Dashboard";
 import Landing from "../views/Landing/Landing";
 import Contact from "../views/Contact";
 import Profile from "../views/Dashboard/Profile";
-
+import Properties from "@/components/Properties/Properties";
 
 export const configureRoute = (routes: ROUTE[]) => {
-	return routes.map((route: ROUTE) =>
-		<Route key={route.name}
-			// add index prop conditionally 
-			{...(route.index && { index: true })}
-			path={route.path}
-			element={route.element} />)
-}
+  return routes.map((route: ROUTE) => (
+    <Route
+      key={route.name}
+      // add index prop conditionally
+      {...(route.index && { index: true })}
+      path={route.path}
+      element={route.element}
+    />
+  ));
+};
 
 // main routes
 export const MAIN_ROUTES: ROUTE[] = [
-	{
-		path: '/',
-		title: "Home",
-		index: true,
-		name: 'landing',
-		element: <Landing />,
-	},
-	{
-		path: '/about',
-		title: "About",
-		name: 'about',
-		element: <About />,
-	},
-	{
-		path: '/contact',
-		title: "Contact Us",
-		name: 'contact',
-		element: <Contact />,
-	}
-]
+  {
+    path: "/",
+    title: "Home",
+    index: true,
+    name: "landing",
+    element: <Landing />,
+  },
+  {
+    path: "/properties",
+    title: "Properties",
+    name: "properties",
+    element: <Properties />,
+  },
+  {
+    path: "/about",
+    title: "About",
+    name: "about",
+    element: <About />,
+  },
+  {
+    path: "/contact",
+    title: "Contact Us",
+    name: "contact",
+    element: <Contact />,
+  },
+];
 
 // sub route - dashboard/
 export const DASHBOARD_NESTED_ROUTES: ROUTE[] = [
-	{
-		path: '/dashboard',
-		index: true,
-		title: "Dashboard",
-		name: 'dashboard',
-		element: <Home />,
-	},
-	{
-		path: 'settings',
-		title: "Settings",
-		name: 'settings',
-		element: <Settings />,
-	},
-	{
-		path: 'profile',
-		title: "My Profile",
-		name: 'profile',
-		element: <Profile />
-	}
-]
+  {
+    path: "profile",
+    title: "My Profile",
+    name: "profile",
+    element: <Profile />,
+  },
+];

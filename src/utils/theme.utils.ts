@@ -15,14 +15,15 @@ declare module '@mui/material/styles' {
   }
 }
 
-
 export const theme = createTheme({
-   palette: {
-    primary: {
-      main: '#8A784E',
-    },
-    secondary: {
-      main: '#edf2ff',
-    },
+  palette: {
+    primary: { main: "#1565c0" },   // Deep Blue
+    secondary: { main: "#64b5f6" }, // Light Blue
+    background: { default: "#f9fafc" },
+  },
+  typography: {
+    fontFamily: "Poppins, Roboto, sans-serif",
+    h4: { fontWeight: 700 },
+    h5: { fontWeight: 600 },
   },
 });
